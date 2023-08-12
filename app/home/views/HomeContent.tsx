@@ -121,7 +121,11 @@ const HomeContent = (props: HomeContentProps) => {
             uri: props.content.user?.avatar,
           }}
           isFollowing={props.isFollowing}
-          onFlipPress={onFlipPress}
+          onFlipPress={
+            props.content.type === homeConstants.CONTENT_TYPES.flashcard
+              ? onFlipPress
+              : undefined
+          }
         />
       </View>
 

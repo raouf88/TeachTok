@@ -1,0 +1,21 @@
+{
+  "bottom_tab_titles": {
+    "home": "Home",
+    "discover": "Discover",
+    "activity": "Activity",
+    "bookmarks": "Bookmarks",
+    "profile": "Profile"
+  },
+  "home": {
+    "top_bar": {
+      "following": "Following",
+      "for_you": "For You"
+    },
+    "playlist": "Playlist • ",
+    "flip": "Flip",
+    "flash_card": {
+      "answer_heading": "Answer",
+      "rating_heading": "How well did you know this?"
+    }
+  }
+}

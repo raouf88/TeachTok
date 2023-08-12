@@ -3,7 +3,13 @@ import {useTranslation} from 'react-i18next';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {SceneMap, TabView} from 'react-native-tab-view';
 import {AppTheme} from '../../Main/src/themes';
-import {StyleSheet, Text, View, useWindowDimensions} from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+} from 'react-native';
 import TimeIcon from '../../../assets/icons/ic_time.svg';
 import SearchIcon from '../../../assets/icons/ic_search.svg';
 import homeConstants from '../src/homeConstants';
@@ -50,13 +56,16 @@ function HomeScreen(): JSX.Element {
   };
 
   return (
-    <TabView
-      navigationState={{index, routes}}
-      renderScene={renderScene}
-      renderTabBar={renderTopBar}
-      onIndexChange={setIndex}
-      initialLayout={{width: windowDimensions.width}}
-    />
+    <>
+      <StatusBar translucent backgroundColor={'transparent'} />
+      <TabView
+        navigationState={{index, routes}}
+        renderScene={renderScene}
+        renderTabBar={renderTopBar}
+        onIndexChange={setIndex}
+        initialLayout={{width: windowDimensions.width}}
+      />
+    </>
   );
 }
 

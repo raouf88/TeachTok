@@ -2,7 +2,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {StatusBar, View} from 'react-native';
+import {StatusBar, UIManager, View} from 'react-native';
 import HomeIcon from '../../../assets/icons/ic_home.svg';
 import DiscoverIcon from '../../../assets/icons/ic_discover.svg';
 import TimeIcon from '../../../assets/icons/ic_time.svg';
@@ -14,6 +14,11 @@ import i18n from '../src/i18n';
 import {AppDefaultTheme} from '../src/themes';
 import {Provider} from 'react-redux';
 import store from '../src/store';
+
+// to enable LayoutAnimation on Android
+if (UIManager.setLayoutAnimationEnabledExperimental) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 const Tab = createBottomTabNavigator();
 
